@@ -2,7 +2,7 @@ const playwright = require("playwright");
 const assert = require("assert");
 
 // #test_button1 のボタンを押下して、ボタンの表記を取得する
-const setup = async (browserType) => {
+const croll_click = async (browserType) => {
   const browser = await playwright[browserType].launch();
   const context = await browser.newContext();
   const page = await context.newPage();
@@ -16,16 +16,16 @@ const setup = async (browserType) => {
 };
 
 test("click chromium", async () => {
-  let result = await setup("chromium");
+  let result = await croll_click("chromium");
   expect(result).toMatch(/ボタン押下後/);
 });
 
 test("click firefox", async () => {
-  let result = await setup("chromium");
+  let result = await croll_click("chromium");
   expect(result).toMatch(/ボタン押下後/);
 });
 
 test("click webkit", async () => {
-  let result = await setup("chromium");
+  let result = await croll_click("chromium");
   expect(result).toMatch(/ボタン押下後/);
 });
