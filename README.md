@@ -2,7 +2,15 @@
 
 playwright のサンプル
 
-run demo
+# 環境セットアップ
 
+`npm install`
 `docker run --rm --name sample -p 8090:80 -v $PWD/src/app:/usr/share/nginx/html -d nginx`
-`node src/test/buttton_test.js`
+
+# test の実行
+
+`npm test`
+
+# format
+
+`make format`
