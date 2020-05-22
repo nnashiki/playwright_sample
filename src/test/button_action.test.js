@@ -16,16 +16,16 @@ const setup = async (browserType) => {
 };
 
 test("click chromium", async () => {
-  result = await setup("chromium");
+  let result = await setup("chromium");
   expect(result).toMatch(/ボタン押下後/);
 });
 
 test("click firefox", async () => {
-  result = await setup("chromium");
+  let result = await setup("chromium");
   expect(result).toMatch(/ボタン押下後/);
 });
 
 test("click webkit", async () => {
-  result = await setup("chromium");
+  let result = await setup("chromium");
   expect(result).toMatch(/ボタン押下後/);
 });
