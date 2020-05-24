@@ -20,11 +20,11 @@ test("click chromium", async () => {
 });
 
 test("click firefox", async () => {
-  let result = await croll_click("chromium");
+  let result = await croll_click("firefox");
   expect(result).toMatch(/ボタン押下後/);
 });
 
 test("click webkit", async () => {
-  let result = await croll_click("chromium");
+  let result = await croll_click("webkit");
   expect(result).toMatch(/ボタン押下後/);
 });
