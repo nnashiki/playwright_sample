@@ -1,5 +1,4 @@
 const playwright = require("playwright");
-const assert = require("assert");
 
 // #test_button1 のボタンを押下して、ボタンの表記を取得する
 const croll_click = async (browserType) => {
