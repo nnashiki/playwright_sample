@@ -2,7 +2,7 @@ const playwright = require("playwright");
 
 // #test_button1 のボタンを押下して、ボタンの表記を取得する
 const croll_click = async (browserType) => {
-  const browser = await playwright[browserType].launch();
+  const browser = await playwright[browserType].launch({slowMo: 1000});
   const context = await browser.newContext({ videosPath: "./" });
   const page = await context.newPage();
   console.log(await page.video().path());
