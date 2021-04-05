@@ -7,6 +7,7 @@ const croll_click = async (browserType) => {
   const page = await context.newPage();
   console.log(await page.video().path());
   await page.goto("http://localhost:8090");
+  await page.fill('input[id="text_input1"]', "test");
   await page.click("#test_button1");
   const click_after_text = await page.evaluate(() => {
     return document.getElementById("test_button1").innerText;
