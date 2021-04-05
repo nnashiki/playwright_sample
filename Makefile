@@ -1,2 +1,2 @@
 format:
-	prettier --write .
+	npx prettier --write .
